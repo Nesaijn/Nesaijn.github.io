@@ -1,44 +1,44 @@
 :root{
-	font-size: 16px;
-	--text-primary: #b6b6b6;
-	--text-secondary: #ececec;
-	--bg-primary: #23232e;
-	--bg-secondary: #141418;
-	--transition-speed: 600ms;
+  font-size: 16px;
+  --text-primary: #b6b6b6;
+  --text-secondary: #ececec;
+  --bg-primary: #23232e;
+  --bg-secondary: #141418;
+  --transition-speed: 600ms;
 }
 
 body{
-	color: black;
-	background-color: white;
-	margin: 0;
-	padding: 0;
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0;
 }
 
-/* Scrollbar Width */
+/* Scrollbar Breite */
 body::-webkit-scrollbar{
-width: 0.25rem;
+  width: 0.25rem;
 }
 
 /* Scrollbar Tracker */
 body::-webkit-scrollbar-track{
-	background: #1e1e24; /* Lila */
+  background: #1e1e24; /* Lila */
 }
 
-/* Scrollbar Background */
+/* Scrollbar Hintergrund */
 body::-webkit-scrollbar-thumb{
-	background:#6649b8; /* Grau-Schwarz */
+  background:#6649b8; /* Grau-Schwarz */
 }
 
 main {
-	margin-left: 5rem; 
-	padding: 1rem;
+  margin-left: 5rem; 
+  padding: 1rem;
 }
 
 .navbar{
-	position: fixed;
-	background-color: var(--bg-primary);
-	transition: width 600ms ease;
-	overflow: scroll;
+  position: fixed;
+  background-color: var(--bg-primary);
+  transition: width 600ms ease;
+  overflow: scroll;
 }
 
 .navbar-nav{
@@ -86,10 +86,6 @@ main {
   margin: 0 1.5rem;
 }
 
-.navbar:hover .logo svg{
-  transform: rotate(-180deg);
-}
-
 .fa-primary{
   color: #df49a6;
   transition: var(--transition-speed);
@@ -109,6 +105,10 @@ main {
 .logo svg{
   transform: rotate(0deg);
   transition: var(--transition-speed);
+}
+
+.navbar:hover .logo svg{
+  transform: rotate(-180deg);
 }
 
 
@@ -134,14 +134,13 @@ main {
   main{
     margin: 0;
   }
-
 }
 
 @media only screen and (min-width: 601px){
   .navbar{
+    top: 0;
     width: 5rem;
     height: 100vh;
-    top: 0;
   }
   
   .navbar:hover{
@@ -151,4 +150,9 @@ main {
   .navbar:hover .link-text{
     display: inline;
   }
+
+  .navbar:hover .logo-text{
+    left: 0px;
+  }
+
 }
